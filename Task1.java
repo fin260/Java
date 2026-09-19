@@ -1,13 +1,14 @@
-//TIP Чтобы <b>запустить</b> код, нажмите <shortcut actionId="Run"/> или
-// нажмите на значок <icon src="AllIcons.Actions.Execute"/> в поле.
-void main() {
-    //TIP Нажмите <shortcut actionId="ShowIntentionActions"/>, когда курсор находится на выделенном тексте
-    // чтобы увидеть, как OpenIDE предлагает это исправить.
-    IO.println(String.format("Hello and welcome!"));
+public class Main {
+    public static void main(String[] args) {
+        int[] b = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Нажмите <shortcut actionId="Debug"/>, чтобы начать отладку вашего кода. Мы установили одну <icon src="AllIcons.Debugger.Db_set_breakpoint"/> точку останова
-        // для вас, но вы всегда можете добавить больше, нажав <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        int sum = 0;
+        for (int i = 0; i < b.length; i++) {
+            sum += b[i];
+        }
+
+        float average = (float) sum / b.length;
+        System.out.println("Сумма: " + sum);
+        System.out.println("Среднее арифметическое: " + average);
     }
 }
